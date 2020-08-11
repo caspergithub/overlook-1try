@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Style from '../../styles/frontpage.module.scss'
+import ImageSlider from "./ImageSlider";
+import slide1 from "../../images/slide1.jpg";
+
+import Findroom from '../findroom/findroom';
+
 
 function Frontpage(props) {
 
@@ -37,13 +42,15 @@ function Frontpage(props) {
             .catch(error => console.log(error))
     }
 
-    // console.log(bannerImg)
+    console.log(bannerImg)
     // console.log(news)
-    console.log(rooms)
+    // console.log(rooms)
 
     return (
         <>
+        <Findroom />
             <div className={Style.heroImageWrapper}>
+                <ImageSlider slide={slide1} />
                 <div className={Style.heroImage} style={{ backgroundImage: `url(${bannerImg && bannerImg.items[4].image})` }}></div>
                 <div className={Style.heroText}><span>VELKOMMEN TIL HOTEL OVERLOOK ONLINE</span></div>
             </div>

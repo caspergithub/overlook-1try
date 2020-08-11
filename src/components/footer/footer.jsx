@@ -6,7 +6,7 @@ import Style from '../../styles/footer.module.scss'
 function Footer(props) {
     return (
         <section className={Style.footer}>
-            <span>© 2019 Hotel Overlook. Alle rettigheder forbeholdt.</span>
+            <span className={Style.spanText}>© 2019 Hotel Overlook. Alle rettigheder forbeholdt.</span>
             <div className={Style.sm}>
                 <div><FaFacebook /></div>
                 <div><FaTwitter /></div>

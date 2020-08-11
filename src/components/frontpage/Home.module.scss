@@ -1,0 +1,155 @@
+$bannerHeight: 700px;
+
+.Home {
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .banner {
+        width: 100%;
+        position: absolute;
+        height: $bannerHeight;
+        left: 0;
+        top: 0;
+
+        .slide1 {
+            height: 100%;
+            width: 100%;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                z-index: 10;
+                position: relative;
+                font-size: 60px;
+                letter-spacing: 6px;
+
+            }
+
+            .image {
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.2);
+                    z-index: 10;
+                    display: block;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .content {
+        margin: $bannerHeight - 100 auto 0px auto;
+
+        .firstSection {
+
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+
+            .brod {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 40px;
+
+                .article {
+                    margin: 0 auto;
+                    width: 200px;
+                    height: 200px;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 50%;
+                }
+            }
+
+        }
+
+
+        .nyhedbrev {
+            height: 550px;
+            background-image: url("../../images/slide1.jpg");
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            margin: 100px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                width: 600px;
+                padding: 20px;
+                border: 0px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            i {
+                padding: 21px;
+                color: white;
+            }
+
+            button {
+                border: 0px;
+                padding: 20px 40px;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        .bagverk {
+            width: 1200px;
+            margin: 100px auto;
+            text-align: center;
+
+            .products {
+
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 40px;
+                text-align: center;
+                margin-top: 100px;
+
+                .product {
+                    position: relative;
+
+                    padding-bottom: 50px;
+
+                    .image {
+                        border-radius: 50%;
+                        width: 200px;
+                        height: 200px;
+                        margin: 0 auto;
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    a {
+                        position: absolute;
+                        width: 100px;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%, 0)
+                    }
+                }
+
+            }
+        }
+    }
+}

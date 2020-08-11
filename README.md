@@ -1,3 +1,6 @@
+link til postman
+https://documenter.getpostman.com/view/6540576/T1LJmUf2?version=latest#intro
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
