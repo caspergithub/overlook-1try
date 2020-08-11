@@ -7,6 +7,9 @@ import Navigation from './components/navigation/navigation'
 import Frontpage from './components/frontpage/frontpage'
 import Footer from './components/footer/footer'
 import Login from './components/login/login'
+import Hotels from './components/hotels/hotels'
+import Rooms from './components/rooms/rooms'
+import Reservation from './components/reservation/reservation'
 
 function App() {
 
@@ -24,6 +27,9 @@ function App() {
       <Navigation loginData={loginData} setLoginData={setLoginData}/>
       <Switch>
         <Route path="/login"><Login loginData={loginData} setLoginData={setLoginData}/></Route>
+        <Route path="/hotels"><Hotels /></Route>
+        <Route path="/rooms"><Rooms /></Route>
+        <Route path="/reservation"><Reservation /></Route>
         <Route path="/"><Frontpage setLoginData={setLoginData}/></Route>
       </Switch>
       <Footer />

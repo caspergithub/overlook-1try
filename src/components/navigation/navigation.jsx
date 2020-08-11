@@ -17,9 +17,9 @@ function Navigation(props) {
             </div>
             <ul className={Style.links}>
                 <li><Link to='/'><p>Forside</p></Link></li>
-                <li><p>Hoteller og destinationer</p></li>
-                <li><p>Værelser</p></li>
-                <li><p>Reservation</p></li>
+                <li><Link to='/hotels'><p>Hoteller og destinationer</p></Link></li>
+                <li><Link to='/rooms'><p>Værelser</p></Link></li>
+                <li><Link to='/reservation'><p>Reservation</p></Link></li>
                 {!props.loginData &&
                     <li><Link to="/login"><p>Login</p></Link></li>
                 }
