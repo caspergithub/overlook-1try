@@ -3,10 +3,17 @@
 .loginWrapper {
     width: 80%;
     margin: auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .form {
-    width: 40%;
+    width: 70%;
     margin-bottom: 25%;
 
     h4 {
@@ -22,10 +29,10 @@
     }
 
     input {
-        width: 85%;
+        width: 75%;
         display: block;
         height: auto;
-        padding: 10px 24px;
+        padding: 10px 0px 10px 24px;
         border: solid 1px black;
         border-radius: 2px;
         text-align: left;
@@ -40,6 +47,17 @@
         color: white;
         background-color: red;
         margin-right: 1rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        input {
+            width: 90%;
+        }
+        button{
+            width: 100%;
+            margin: 1rem 0;
+        }
     }
 
 }
@@ -60,19 +78,21 @@
     padding: 1rem 0;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
 .borderBottom {
     padding: 0 0 2rem 0;
     border-bottom: 2px dashed $grey1;
+    font-weight: 100;
 }
 
 
 .heroImageWrapper {
     position: relative;
     height: 20vw;
+    background-color: $grey1;
 }
 
 .heroImage {
@@ -83,4 +103,27 @@ button{
     background-repeat: no-repeat;
     z-index: 0;
     margin-bottom: 1rem;
+}
+
+.loginRightSideGrid {
+    margin: 0 0 4rem 4rem;
+    border-left: 2px solid $grey1;
+    padding: 0 0 0 2rem;
+
+    @media screen and (max-width: 800px) {
+        margin: 0 0 4rem 2rem;
+        padding: 0 0 0 1rem;
+    }
+}
+
+.colorRed {
+    color: red;
+}
+
+.colorBlue {
+    color: blue;
+}
+
+.fontWeight700 {
+    font-weight: 700;
 }

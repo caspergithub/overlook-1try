@@ -68,25 +68,32 @@ function Login(props) {
                 <div className={Style.heroImage} style={{ backgroundImage: `url(${bannerImg && bannerImg.items[1].image})` }}></div>
             </div>
             <div className={Style.loginWrapper}>
-                <Link to='/' className={Style.bca}><span className={Style.loginSpan}>Hotel Overlook</span></Link> &rsaquo; <span>Login</span>
-                <h2 className={Style.loginH2}>login</h2>
-                <p className={Style.borderBottom}>Her kan du administrere dine reservationer</p>
-                <section className={Style.form}>
-                    <h4>{!props.loginData ? message : `Du er logget ind som ${props.loginData.username}`}</h4>
-                    <>
-                        <label>Brugernavn</label>
-                        <input type="username" onChange={(e) => { setUsername(e.target.value) }} required placeholder="Indtast din email"></input>
-                        <label>Adgangskode</label>
-                        <input type="password" onChange={(e) => { setPassword(e.target.value) }} required placeholder="Indtast din adgangskode"></input>
-                        {!props.loginData &&
-                            <button onClick={(e) => sendLoginRequest(e)}>Login</button>
-                        }
-                        {props.loginData &&
-                            <button onClick={() => logOut()}>Log ud</button>
-                        }
-                        <button>Annuller</button>
-                    </>
-                </section>
+                <div>
+                    <Link to='/' className={Style.bca}><span className={Style.loginSpan}>Hotel Overlook</span></Link> &rsaquo; <span>Login</span>
+                    <h2 className={Style.loginH2}>login</h2>
+                    <p className={Style.borderBottom}>Her kan du administrere dine reservationer</p>
+                    <section className={Style.form}>
+                        <h4>{!props.loginData ? message : `Du er logget ind som ${props.loginData.username}`}</h4>
+                        <>
+                            <label>Brugernavn:<span className={Style.colorRed}>*</span></label>
+                            <input type="username" onChange={(e) => { setUsername(e.target.value) }} required placeholder="Indtast din email"></input>
+                            <label>Adgangskode:<span className={Style.colorRed}>*</span></label>
+                            <input type="password" onChange={(e) => { setPassword(e.target.value) }} required placeholder="Indtast din adgangskode"></input>
+                            {!props.loginData &&
+                                <button onClick={(e) => sendLoginRequest(e)}>Login</button>
+                            }
+                            {props.loginData &&
+                                <button onClick={() => logOut()}>Log ud</button>
+                            }
+                            <button>Annuller</button>
+                        </>
+                    </section>
+                </div>
+                <div className={Style.loginRightSideGrid}>
+                    <p className={Style.fontWeight700}>Problem med login?</p>
+                    <p className={Style.colorBlue}>Glemt adgangskode?</p>
+                    <p className={Style.colorBlue}>Opret bruger</p>
+                </div>
             </div>
         </div>
     )

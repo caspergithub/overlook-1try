@@ -24,7 +24,7 @@ function Navigation(props) {
                     <li><Link to="/login"><p>Login</p></Link></li>
                 }
                 {props.loginData &&
-                    <li><p onClick={() => logOut()}>Log ud</p></li>
+                    <li><p className={Style.cursorPointer} onClick={() => logOut()}>Log ud</p></li>
                 }
             </ul>
         </nav>

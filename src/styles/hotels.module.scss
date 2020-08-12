@@ -1,4 +1,85 @@
-.hotelsMainWrapper{
+@import "siteTheme";
+
+.countryMainWrapper{
     width: 80%;
     margin: auto;
+}
+
+.countryUl{
+    background-image: linear-gradient(to right, #ebebeb, white , #ebebeb);
+    padding: 1rem 2rem;
+    box-shadow: 0px 8px 8px -12px #00000080;
+    text-align: center;
+    margin: 0 0 2rem 0;
+
+    li{
+        display: inline-block;
+        padding: 0 .5rem;
+    }
+}
+
+.mainGrid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.countryH2{
+    font-weight: 200;
+}
+
+.grid2 {
+    margin: 0 0 4rem 4rem;
+    border-left: 2px solid $grey1;
+    padding: 0 0 0 2rem;
+
+    @media screen and (max-width: 800px) {
+        margin: 0 0 4rem 2rem;
+        padding: 0 0 0 1rem;
+    }
+}
+
+.heroImageWrapper {
+    position: relative;
+    background-color: $grey1;
+    height: 24vw;
+}
+
+.heroImage {
+    width: 100%;
+    height: 24vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.heroText {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background-color: #000000a1;
+    padding: 1rem;
+    border-radius: 0 0 60px 0;
+    padding-right: 4rem;
+    box-shadow: -4px 12px 0px -4px rgba(255, 0, 0, 0.685);
+    width: fit-content;
+
+    span {
+        line-height: 18px;
+        font-size: 2vw;
+        font-weight: 600;
+    }
+
+    @media screen and (max-width: 600px) {
+        left: 45%;
+        padding: .5rem;
+        padding-right: 1.5rem;
+
+        span {
+            font-size: 14px;
+        }
+    }
 }
