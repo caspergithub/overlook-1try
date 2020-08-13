@@ -11,7 +11,7 @@ function Finland(props) {
                 <div className={Style.heroImage}></div>
                 <div className={Style.heroText}><span>HOTELLER OG DESTINATIONER</span></div>
             </div>
-            <section className={Style.countryMainWrapper}>
+            <section className={Style.mainGridWrapper}>
                 <ul className={Style.countryUl}>
                     <li><Link to="/denmark">Danmark</Link></li>
                     <li><Link to="/sweden">Sverige</Link></li>
@@ -24,7 +24,7 @@ function Finland(props) {
                 <div className={Style.mainGrid}>
                     <div className={Style.grid1}>
                         <Link to='/' className={Style.bca}><span>Hotel Overlook</span></Link> &rsaquo; <span>Hoteller og Destinationer</span> &rsaquo; <span>Finland</span>
-                        <h2 className={Style.countryH2}>Vores hoteller i Finland</h2>
+                        <h2 className={Style.h2fontWeight200}>Vores hoteller i Finland</h2>
                     </div>
                     <div className={Style.grid2}>
                         <p>Kort over Finland</p>
