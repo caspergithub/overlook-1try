@@ -19,11 +19,12 @@
 }
 
 .mainGrid{
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
-.h2fontWeight200{
+.fontWeight200{
     font-weight: 200;
 }
 
@@ -56,7 +57,7 @@
 .heroText {
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 30%;
     height: 20px;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -81,5 +82,51 @@
         span {
             font-size: 14px;
         }
+    }
+}
+
+.countryDescription{
+    padding: 0 0 2rem 0;
+    border-bottom: 2px dashed $grey1;
+    font-weight: 100;
+    margin-bottom: 2rem;
+}
+
+.cityImage{
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.theCities{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.mapDiv{
+    width: 100%;
+    height: 200px;
+    background-color: $grey1;
+}
+
+.selectedRoomsImage{
+    width: 100%;
+    height: 120px;
+}
+
+.theSelectedRoomsImages{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
     }
 }
