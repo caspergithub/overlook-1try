@@ -6,25 +6,25 @@ function Selectionofrooms(props) {
 
     //fetch Junior Suite
     useEffect(() => {
-        getSelectedJuniorSuite()
+        getSelectedAllRooms()
     }, [])
 
-    const [JuniorSuite, setJuniorSuite] = useState("");
+    const [AllRooms, setAllRooms] = useState("");
 
-    const getSelectedJuniorSuite = () => {
+    const getSelectedAllRooms = () => {
         let url = `https://api.mediehuset.net/overlook/rooms/by_hotel/1`
         fetch(url)
             .then(response => response.json())
-            .then(json => setJuniorSuite(json))
+            .then(json => setAllRooms(json))
             .catch(error => console.log(error))
     }
 
-    console.log(JuniorSuite.items)
+    console.log(AllRooms.items)
 
     return (
         <>
             <div className={Style.heroImageWrapper}>
-                <div className={Style.heroImage} style={{ backgroundImage: `url(${JuniorSuite ? JuniorSuite.items[5].images[1].image : null})` }}></div>
+                <div className={Style.heroImage} style={{ backgroundImage: `url(${AllRooms ? AllRooms.items[5].images[1].image : null})` }}></div>
                 <div className={Style.heroText}><span>VÆRELSER</span></div>
             </div>
             <section className={Style.mainGridWrapper}>
@@ -42,8 +42,8 @@ function Selectionofrooms(props) {
 
                         Du kan se de forskellige værelsestyper ved at klikke dig rundt i menuen til højre.</p>
                         <section className={Style.theSelectedRoomsImages}>
-                            {JuniorSuite.items
-                                ? JuniorSuite.items[5].images.map(({ name, description, id, image }) => (
+                            {AllRooms.items
+                                ? AllRooms.items[5].images.map(({ name, description, id, image }) => (
                                     <div key={id}>
                                         <img src={image} className={Style.selectedRoomsImage} alt="" />
                                         <h3 className={Style.fontWeight200}>{name}</h3>
@@ -55,16 +55,32 @@ function Selectionofrooms(props) {
                     </div>
                     <div className={Style.grid2}>
                         <p>Værelsestyper</p>
-                        <section className={Style.theSelectedRoomsImages}>
-                            {JuniorSuite.items
-                                ? JuniorSuite.items.map(({ room_title, id, image }) => (
-                                    <div key={id}>
-                                        <img src={image} className={Style.selectedRoomsImage} alt="" />
-                                        <h3 className={Style.fontWeight200}>{room_title}</h3>
-                                    </div>
-                                ))
-                                : null}
-                        </section>
+                        
+                        <div className={Style.grid2selectRoomGrid}>
+                        <img src={AllRooms ? AllRooms.items[2].images[1].image : null} alt="" className={Style.grid2roomImage} />
+                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[2].room_title : null}</p>
+                        </div>
+
+                        <div className={Style.grid2selectRoomGrid}>
+                        <img src={AllRooms ? AllRooms.items[1].images[1].image : null} alt="" className={Style.grid2roomImage} />
+                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[1].room_title : null}</p>
+                        </div>
+
+                        <div className={Style.grid2selectRoomGrid}>
+                        <img src={AllRooms ? AllRooms.items[4].images[1].image : null} alt="" className={Style.grid2roomImage} />
+                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[4].room_title : null}</p>
+                        </div>
+
+                        <div className={Style.grid2selectRoomGrid}>
+                        <img src={AllRooms ? AllRooms.items[5].images[1].image : null} alt="" className={Style.grid2roomImage} />
+                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[5].room_title : null}</p>
+                        </div>
+
+                        <div className={Style.grid2selectRoomGrid}>
+                        <img src={AllRooms ? AllRooms.items[6].images[1].image : null} alt="" className={Style.grid2roomImage} />
+                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[6].room_title : null}</p>
+                        </div>
+
                     </div>
                 </div>
             </section>
