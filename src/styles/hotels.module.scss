@@ -3,6 +3,10 @@
 .mainGridWrapper {
     width: 80%;
     margin: auto;
+
+    @media screen and (max-width: 370px) {
+        width: 90%;
+    }
 }
 
 .countryUl {
