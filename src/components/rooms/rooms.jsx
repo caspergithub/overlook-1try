@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Findroom from '../findroom/findroom';
 import Selectionofrooms from '../selectionofrooms/selectionofrooms';
-import StandardRoom from '../standardRoom/standardRoom';
 import StandardSingle from '../standardSingle/standardSingle';
+import StandardRoom from '../standardRoom/standardRoom';
 import EconomyRoom from '../economyRoom/economyRoom';
 import SuperiorRoom from '../superiorRoom/superiorRoom';
 import SuperiorPlus from '../superiorPlus/superiorPlus';

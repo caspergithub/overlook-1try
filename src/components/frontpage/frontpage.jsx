@@ -69,17 +69,29 @@ function Frontpage(props) {
 
                 <h2>Se udvalgte værelser</h2>
                 <section className={Style.ourSelectedRooms}>
-                    {rooms.items && rooms.items.map((item, index) => {
-                        if (index < 3) {
-                            return (<div key={index}>
-                                <Link to="/rooms">
-                                    <img src={item.images[0].image} className={Style.Img} alt="" />
-                                    <h3>{item.room_title}</h3>
-                                    <p>{item.description}</p>
-                                </Link>
-                            </div>)
-                        }
-                    })}
+                    <Link to="/standardSingle">
+                        <div>
+                            <img src={rooms ? rooms.items[0].images[0].image : null} className={Style.Img} alt="" />
+                            <h3>{rooms ? rooms.items[0].room_title : null}</h3>
+                            <p>{rooms ? rooms.items[0].description : null}</p>
+                        </div>
+                    </Link>
+
+                    <Link to="/economyRoom">
+                        <div>
+                            <img src={rooms ? rooms.items[1].images[0].image : null} className={Style.Img} alt="" />
+                            <h3>{rooms ? rooms.items[1].room_title : null}</h3>
+                            <p>{rooms ? rooms.items[1].description : null}</p>
+                        </div>
+                    </Link>
+
+                    <Link to="/standardRoom">
+                        <div>
+                            <img src={rooms ? rooms.items[2].images[0].image : null} className={Style.Img} alt="" />
+                            <h3>{rooms ? rooms.items[2].room_title : null}</h3>
+                            <p>{rooms ? rooms.items[2].description : null}</p>
+                        </div>
+                    </Link>
                 </section>
             </div>
         </>
