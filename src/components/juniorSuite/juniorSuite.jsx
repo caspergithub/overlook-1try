@@ -8,7 +8,7 @@ import FamilyIcon from '../../images/family-icon.png'
 import BedIcon from '../../images/bed-icon.png'
 import Checkmark from '../../images/checkmark-icon.png'
 
-function StandardRoom() {
+function JuniorSuite() {
 
     //fetch all rooms
     useEffect(() => {
@@ -30,7 +30,7 @@ function StandardRoom() {
     //Get the standard room
 
     const getRoomData = () => {
-        let url = `https://api.mediehuset.net/overlook/rooms/7`
+        let url = `https://api.mediehuset.net/overlook/rooms/4`
         fetch(url)
             .then(response => response.json())
             .then(json => setRoomData(json))
@@ -42,7 +42,7 @@ function StandardRoom() {
     return (
         <>
             <div className={Style.heroImageWrapper}>
-                <div className={Style.heroImage} style={{ backgroundImage: `url(${AllRooms ? AllRooms.items[2].images[0].image : null})` }}></div>
+                <div className={Style.heroImage} style={{ backgroundImage: `url(${AllRooms ? AllRooms.items[5].images[0].image : null})` }}></div>
                 <div className={Style.heroText}><span>VÆRELSER</span></div>
             </div>
             <section className={Style.mainGridWrapper}>
@@ -54,7 +54,7 @@ function StandardRoom() {
                         <h2 className={Style.fontWeight200}>{RoomData.item ? RoomData.item.title : null}</h2>
                         <section className={Style.theSelectedRoomsImages}>
                             {AllRooms.items
-                                ? AllRooms.items[2].images.map(({ name, description, id, image }) => (
+                                ? AllRooms.items[5].images.map(({ name, description, id, image }) => (
                                     <div key={id}>
                                         <img src={image} className={Style.selectedRoomsImage} alt="" />
                                         <h3 className={Style.fontWeight200}>{name}</h3>
@@ -71,10 +71,6 @@ function StandardRoom() {
                         <div className={Style.facilitiesGrid1}>
                             <img src={FamilyIcon} alt="" />
                             <p className={Style.fontWeight200}>Plads til {RoomData.item ? RoomData.item.num_persons : null} personer.</p>
-                        </div>
-                        <div className={Style.facilitiesGrid1}>
-                            <img src={BedIcon} alt="" />
-                            <p className={Style.fontWeight200}>Sengetyper: {RoomData.item ? RoomData.item.facilities[8].title : null}</p>
                         </div>
                         <h3 className={Style.fontWeight200}>Værelset er ustyret med:</h3>
                         <div className={Style.facilitiesGrid2}>{RoomData.item ? RoomData.item.facilities.map(({ id, title }) => (
@@ -153,4 +149,4 @@ function StandardRoom() {
     )
 }
 
-export default StandardRoom
+export default JuniorSuite

@@ -32,7 +32,7 @@ function Selectionofrooms(props) {
             <section className={Style.mainGridWrapper}>
                 <div className={Style.mainGrid}>
                     <div>
-                        <span>breadcrumbs</span>
+                        <span>Værelser</span>
                         <h2 className={Style.fontWeight200}>Se vores udvalg af værelser</h2>
                         <p className={Style.fontWeight200}>Hos Overlook handler den gode hoteloplevelse helt enkelt om at give dig en bedre service, en bedre søvn og en bedre start på dagen, så du tager videre med en god fornemmelse og får lyst til at komme tilbage.
 
@@ -58,6 +58,13 @@ function Selectionofrooms(props) {
                     <div className={Style.grid2}>
                         <p>Værelsestyper</p>
 
+                        <Link to="/standardSingle">
+                            <div className={Style.grid2selectRoomGrid}>
+                                <img src={AllRooms ? AllRooms.items[0].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                                <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[0].room_title : null}</p>
+                            </div>
+                        </Link>
+
                         <Link to="/standardRoom">
                             <div className={Style.grid2selectRoomGrid}>
                                 <img src={AllRooms ? AllRooms.items[2].images[0].image : null} alt="" className={Style.grid2roomImage} />
@@ -65,25 +72,40 @@ function Selectionofrooms(props) {
                             </div>
                         </Link>
 
-                        <div className={Style.grid2selectRoomGrid}>
-                            <img src={AllRooms ? AllRooms.items[1].images[0].image : null} alt="" className={Style.grid2roomImage} />
-                            <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[1].room_title : null}</p>
-                        </div>
+                        <Link to="/economyRoom">
+                            <div className={Style.grid2selectRoomGrid}>
+                                <img src={AllRooms ? AllRooms.items[1].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                                <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[1].room_title : null}</p>
+                            </div>
+                        </Link>
 
-                        <div className={Style.grid2selectRoomGrid}>
-                            <img src={AllRooms ? AllRooms.items[4].images[0].image : null} alt="" className={Style.grid2roomImage} />
-                            <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[4].room_title : null}</p>
-                        </div>
+                        <Link to="/superiorRoom">
+                            <div className={Style.grid2selectRoomGrid}>
+                                <img src={AllRooms ? AllRooms.items[3].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                                <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[3].room_title : null}</p>
+                            </div>
+                        </Link>
 
-                        <div className={Style.grid2selectRoomGrid}>
-                            <img src={AllRooms ? AllRooms.items[5].images[0].image : null} alt="" className={Style.grid2roomImage} />
-                            <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[5].room_title : null}</p>
-                        </div>
+                        <Link to="/superiorPlus">
+                            <div className={Style.grid2selectRoomGrid}>
+                                <img src={AllRooms ? AllRooms.items[4].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                                <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[4].room_title : null}</p>
+                            </div>
+                        </Link>
 
-                        <div className={Style.grid2selectRoomGrid}>
-                            <img src={AllRooms ? AllRooms.items[6].images[0].image : null} alt="" className={Style.grid2roomImage} />
-                            <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[6].room_title : null}</p>
-                        </div>
+                        <Link to="/juniorSuite">
+                            <div className={Style.grid2selectRoomGrid}>
+                                <img src={AllRooms ? AllRooms.items[5].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                                <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[5].room_title : null}</p>
+                            </div>
+                        </Link>
+
+                        <Link to="/presidentialSuite">
+                            <div className={Style.grid2selectRoomGrid}>
+                                <img src={AllRooms ? AllRooms.items[6].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                                <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[6].room_title : null}</p>
+                            </div>
+                        </Link>
 
                     </div>
                 </div>

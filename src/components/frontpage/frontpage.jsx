@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Style from '../../styles/frontpage.module.scss'
 
+import { Link } from 'react-router-dom'
+
 import Findroom from '../findroom/findroom';
 
 
@@ -40,13 +42,13 @@ function Frontpage(props) {
             .catch(error => console.log(error))
     }
 
-    console.log(bannerImg)
+    // console.log(bannerImg)
     // console.log(news)
     // console.log(rooms)
 
     return (
         <>
-        <Findroom />
+            <Findroom />
             <div className={Style.heroImageWrapper}>
                 <div className={Style.heroImage} style={{ backgroundImage: `url(${bannerImg && bannerImg.items[4].image})` }}></div>
                 <div className={Style.heroText}><span className={Style.heroTextSpan}>VELKOMMEN TIL HOTEL OVERLOOK ONLINE</span></div>
@@ -70,9 +72,11 @@ function Frontpage(props) {
                     {rooms.items && rooms.items.map((item, index) => {
                         if (index < 3) {
                             return (<div key={index}>
-                                <img src={item.images[0].image} className={Style.Img} alt="" />
-                                <h3>{item.room_title}</h3>
-                                <p>{item.description}</p>
+                                <Link to="/rooms">
+                                    <img src={item.images[0].image} className={Style.Img} alt="" />
+                                    <h3>{item.room_title}</h3>
+                                    <p>{item.description}</p>
+                                </Link>
                             </div>)
                         }
                     })}
