@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Findroom from '../findroom/findroom';
 import Selectionofrooms from '../selectionofrooms/selectionofrooms';
+import StandardRoom from '../standardRoom/standardRoom';
 
 
 function Rooms(props) {
@@ -14,6 +15,7 @@ function Rooms(props) {
             <section className={Style.roomsMainWrapper}>
             <Router>
                     <Switch>
+                        <Route path="/standardRoom"><StandardRoom/></Route>
                         <Route path="/"><Selectionofrooms/></Route>
                     </Switch>
                 </Router>

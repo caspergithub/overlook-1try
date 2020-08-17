@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 
+import { Link } from 'react-router-dom'
+
 import Style from '../../styles/hotels.module.scss'
 
 function Selectionofrooms(props) {
 
-    //fetch Junior Suite
+    //fetch All rooms
     useEffect(() => {
         getSelectedAllRooms()
     }, [])
@@ -55,30 +57,32 @@ function Selectionofrooms(props) {
                     </div>
                     <div className={Style.grid2}>
                         <p>Værelsestyper</p>
-                        
+
+                        <Link to="/standardRoom">
+                            <div className={Style.grid2selectRoomGrid}>
+                                <img src={AllRooms ? AllRooms.items[2].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                                <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[2].room_title : null}</p>
+                            </div>
+                        </Link>
+
                         <div className={Style.grid2selectRoomGrid}>
-                        <img src={AllRooms ? AllRooms.items[2].images[1].image : null} alt="" className={Style.grid2roomImage} />
-                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[2].room_title : null}</p>
+                            <img src={AllRooms ? AllRooms.items[1].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                            <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[1].room_title : null}</p>
                         </div>
 
                         <div className={Style.grid2selectRoomGrid}>
-                        <img src={AllRooms ? AllRooms.items[1].images[1].image : null} alt="" className={Style.grid2roomImage} />
-                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[1].room_title : null}</p>
+                            <img src={AllRooms ? AllRooms.items[4].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                            <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[4].room_title : null}</p>
                         </div>
 
                         <div className={Style.grid2selectRoomGrid}>
-                        <img src={AllRooms ? AllRooms.items[4].images[1].image : null} alt="" className={Style.grid2roomImage} />
-                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[4].room_title : null}</p>
+                            <img src={AllRooms ? AllRooms.items[5].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                            <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[5].room_title : null}</p>
                         </div>
 
                         <div className={Style.grid2selectRoomGrid}>
-                        <img src={AllRooms ? AllRooms.items[5].images[1].image : null} alt="" className={Style.grid2roomImage} />
-                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[5].room_title : null}</p>
-                        </div>
-
-                        <div className={Style.grid2selectRoomGrid}>
-                        <img src={AllRooms ? AllRooms.items[6].images[1].image : null} alt="" className={Style.grid2roomImage} />
-                        <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[6].room_title : null}</p>
+                            <img src={AllRooms ? AllRooms.items[6].images[0].image : null} alt="" className={Style.grid2roomImage} />
+                            <p className={Style.grid2roomTitle}>{AllRooms ? AllRooms.items[6].room_title : null}</p>
                         </div>
 
                     </div>

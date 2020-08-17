@@ -1,24 +1,24 @@
 @import "siteTheme";
 
-.mainGridWrapper{
+.mainGridWrapper {
     width: 80%;
     margin: auto;
 }
 
-.countryUl{
-    background-image: linear-gradient(to right, #ebebeb, white , #ebebeb);
+.countryUl {
+    background-image: linear-gradient(to right, #ebebeb, white, #ebebeb);
     padding: 1rem 2rem;
     box-shadow: 0px 8px 8px -12px #00000080;
     text-align: center;
     margin: 0 0 2rem 0;
 
-    li{
+    li {
         display: inline-block;
         padding: 0 .5rem;
     }
 }
 
-.mainGrid{
+.mainGrid {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -28,7 +28,7 @@
     }
 }
 
-.fontWeight200{
+.fontWeight200 {
     font-weight: 200;
 }
 
@@ -89,14 +89,14 @@
     }
 }
 
-.countryDescription{
+.countryDescription {
     padding: 0 0 2rem 0;
     border-bottom: 2px dashed $grey1;
     font-weight: 100;
     margin-bottom: 2rem;
 }
 
-.cityImage{
+.cityImage {
     width: 100%;
     height: 200px;
     background-position: center;
@@ -104,24 +104,24 @@
     background-repeat: no-repeat;
 }
 
-.theCities{
+.theCities {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
 
-.mapDiv{
+.mapDiv {
     width: 100%;
     height: 200px;
     background-color: $grey1;
 }
 
-.selectedRoomsImage{
+.selectedRoomsImage {
     width: 100%;
     height: 120px;
 }
 
-.theSelectedRoomsImages{
+.theSelectedRoomsImages {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 16px;
@@ -135,12 +135,12 @@
     }
 }
 
-.grid2roomImage{
+.grid2roomImage {
     width: 100%;
     height: 100px;
 }
 
-.grid2selectRoomGrid{
+.grid2selectRoomGrid {
     display: grid;
     grid-template-columns: 128px 1fr;
     gap: 16px;
@@ -149,7 +149,54 @@
     align-items: center;
 }
 
-.grid2roomTitle{
+.grid2roomTitle {
     color: blue;
     cursor: pointer;
+}
+
+.facilitiesGrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.price {
+    margin-left: 22px;
+    text-align: end;
+    font-weight: 800;
+}
+
+.facilitiesGrid1 {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 1rem;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+.facilitiesGrid3 {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    gap: .1rem;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.priceGrid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
 }
