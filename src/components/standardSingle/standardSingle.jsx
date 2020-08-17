@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import Style from '../../styles/hotels.module.scss'
 import RoomIcon from '../../images/room-icon.png'
 import FamilyIcon from '../../images/family-icon.png'
-import BedIcon from '../../images/bed-icon.png'
 import Checkmark from '../../images/checkmark-icon.png'
 
 function StandardSingle() {
